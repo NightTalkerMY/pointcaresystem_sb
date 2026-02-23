@@ -46,26 +46,11 @@ This application relies heavily on **Firebase Firestore real-time listeners (`on
 
 ### Expected Firestore Structure
 
-Based on the custom hooks, the database is structured as follows:
+The complete and up-to-date Firestore schema (including collections, documents, and subcollections for the `PCS` hardware and `users`) is managed and documented extensively in our team's Shared Drive. 
 
-**1. `PCS` Collection (The Machines)**
+👉 **[View the Detailed Firestore Architecture Document Here](https://docs.google.com/document/d/1WhmcHUkb0gpV_aRnRkid53PEuWYSOK5rOPfFGLzRpmI/edit?tab=t.0)**
 
-* **Document ID:** Machine ID (e.g., `PCS-01`)
-* **Fields:** `lastSeen` (Timestamp), `activeUsers` (Map of `{ userId: userName }`), `unitName`
-* **Subcollection: `config**` (Liquid Tanks)
-* **Fields:** `liquidName`, `capacityMl`, `currentInventoryMl`, `enabled`
-
-
-* **Subcollection: `state**` (Hardware Telemetry)
-* **Document `health` & `operation`:** `errorState`, `lastReboot`, `lastDispenseUserID`, `lastDispenseStatus`
-
-
-
-**2. `users` Collection (The Patients)**
-
-* **Document ID:** User's Firestore ID
-* **Fields:** `userName`, `wearableDeviceId`, `messages` (Object with `text` and `receivedAt`), `dosageConfig` (Map of `{ tankId: targetMl }`)
-* **Fields:** `device` (Object containing wearable metrics: `avgHeartRate`, `sleep`, etc.)
+*Note for Developers: If you need to modify the database structure or add new fields, please ensure the Shared Drive documentation is updated accordingly so we maintain a single source of truth.*
 
 ---
 

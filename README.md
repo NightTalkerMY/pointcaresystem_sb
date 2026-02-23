@@ -48,7 +48,7 @@ This application relies heavily on **Firebase Firestore real-time listeners (`on
 
 The complete and up-to-date Firestore schema (including collections, documents, and subcollections for the `PCS` hardware and `users`) is managed and documented extensively in our team's Shared Drive. 
 
-👉 **[View the Detailed Firestore Architecture Document Here](https://docs.google.com/document/d/1WhmcHUkb0gpV_aRnRkid53PEuWYSOK5rOPfFGLzRpmI/edit?tab=t.0)**
+👉 **[View the Detailed Firestore Architecture Document Here](https://github.com/user-attachments/files/25496709/PCS.JSON.Data.Model.Specification.pdf)**
 
 *Note for Developers: If you need to modify the database structure or add new fields, please ensure the Shared Drive documentation is updated accordingly so we maintain a single source of truth.*
 

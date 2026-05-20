@@ -50,7 +50,7 @@ export default function InventoryList({ tanks = [] }) {
 
   const getPercentage = (current, capacity) => {
     if (!capacity || capacity === 0) return 0;
-    const pct = Math.round((current / capacity) * 100);
+    const pct = Math.floor((current / capacity) * 100);
     return pct > 100 ? 100 : pct;
   };
 
@@ -189,7 +189,7 @@ function VerticalTank({ pct }) {
     
     if (pct < 10) { 
         colorStart = "#ef4444"; colorEnd = "#dc2626"; 
-    } else if (pct < 30) {
+    } else if (pct < 50) {
         colorStart = "#f59e0b"; colorEnd = "#ea580c"; 
     }
 
